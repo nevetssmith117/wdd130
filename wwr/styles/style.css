@@ -1,112 +1,222 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,600&display=swap');
+
+/* Reset and body styling */
 body {
     background-color: #f0e2e7;
-    font-family: 'Poppins', sans-serif; /* Main body font */
-    font-size: 22px; /* Sets the default font size for the whole page */
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
     margin: 0;
     padding: 0;
 }
 
-/* Headline Styling */
-.home-title {
-    font-family: 'Poppins', sans-serif; /* Specific font for .home-title */
-    font-size: 2em; /* Makes the title twice as big as the body's font size */
+/* Header grid setup */
+header {
+    display: grid;
+    grid-template-columns: 150px auto;
+    background-color: rgba(0, 128, 255, 0.7);
+    align-items: center; /* Added to center the children vertically */
 }
 
-h2 {
-    font-family: 'Arial', sans-serif; /* Specific font for h2 elements */
+#Logo-link {
+    justify-self: center; /* Centers horizontally in the grid cell */
+    align-self: center; /* Centers vertically in the grid cell */
+    padding-top: 5px; /* Adjusted as per your instructions */
 }
 
-/* Content Container */
-#content {
-    max-width: 1600px;
-    margin: 0 auto; /* Centers the content within the page */
+/* Adjust the size of the logo */
+.logo {
+    width: 150px; /* Adjust the width to your desired size */
+    height: auto; /* Maintain aspect ratio */
 }
 
-/* Navigation and Header Styling */
-nav a {
-    text-align: center;
-    padding: 35px;
-}
-
-#hero-msg h1, #hero-msg h4 {
-    text-align: center;
-}
-
+/* Center the Book Now button */
 .button-box {
     text-align: center;
-    height: 100px;
-    
 }
 
-main section {
-    text-align: center;
+.book {
+    display: inline-block;
+    padding: 10px 20px; /* Adjust padding to your preference */
+    border: 2px solid #ff0000; /* Border style */
+    border-radius: 100px; /* Rounded corners */
+    text-decoration: ; /* Remove default underline */
+    color: #ff0000; /* Button text color */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
+}
+
+.book:hover {
+    background-color: #000; /* Background color on hover */
+    color: #ffffff; /* Text color on hover */
+}
+
+/* Flexbox for navigation */
+nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%; /* Added to ensure nav takes up the remaining space */
+}
+nav a {
+    padding: 10px 20px; /* Adjust padding to your preference */
+    text-decoration: none; /* Remove default underline */
+    color: #000; /* Button text color */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
+}
+
+nav a:hover {
+    background-color: #000; /* Background color on hover */
+    color: #fff; /* Text color on hover */
 }
 
 
-/* Background and Button Styling */
+/* Hero section grid setup */
+#hero {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    margin-top: -200px; /* Pushes the hero image over the navigation */
+}
+
+#hero-msg {
+    grid-column: 2/3; /* Adjusted as per previous instructions */
+    grid-row: 1/2; /* Adjusted as per previous instructions */
+    margin-top: 200px; /* Pushes the hero text and button down to prevent overlap with navigation */
+    color: white; /* Adjusted as per previous instructions */
+}
+
+#hero-box {
+    grid-column: 1/4;
+    grid-row: 1/3;
+    z-index: -1; /* Sends the hero image back a layer on the z-axis */
+}
+
+
+/* Main section grid setup */
+main.home-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr); /* 10 equal columns */
+    grid-gap: 10px; /* Added grid gap for spacing */
+}
+
+.card-img, .mountains {
+    width: 100%; /* Ensures images take up 100% of their grid space */
+}
+
+.rivers-card {
+    grid-column: 2/4; /* Place rivers-card from column lines 2–4 */
+    grid-row: 2/3; /* and row lines 2–3 */
+}
+
+.camping-card {
+    grid-column: 5/7; /* Place camping-card from column lines 5–7 */
+    grid-row: 2/3; /* and row lines 2–3 */
+}
+
+.rapids-card {
+    grid-column: 8/10; /* Place rapids-card from column lines 8–10 */
+    grid-row: 2/3; /* and row lines 2–3 */
+}
+
 #background {
-    height: 500px;
-    
+    grid-column: 1/-1; /* Place background from column lines 1–11 */
+    grid-row: 4/9; /* and row lines 4–9 */
 }
 
-body {
-    background-color: #f0e2e7;
+.mountains {
+    grid-column: 2/7; /* Place mountains from column lines 2–7 */
+    grid-row: 5/8; /* and row lines 5–8 */
 }
 
-header {
-    background-color: rgba(0, 128, 255, 0.7);
-}
-
-nav a:hover,
-.book:hover,
-.join:hover {
-    background-color: #0554f2;
-    color: #333;
-    border-radius: 50px;
-    padding: 15px 30px;
-}
-
-.book,
-.join {
-    background-color: #4CAF50;
-    color: #fff;
-    font-size: 18px;
-    padding: 15px 30px;
-    margin-top: 50px;
-    border-radius: 50px;
-}
-
-/* Message Section Styling */
 .msg {
-    background-color: #ffe4e1;
-    line-height: 1.5em;
-    padding: 35px;
-    font-size: 0.8em; /* Slightly smaller font size for .msg paragraphs */
+    grid-column: 6/10; /* Place msg from column lines 6–10 */
+    grid-row: 6/7; /* and row lines 6–7 */
 }
 
-/* Footer Styling */
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 25px 50px;
-    margin-top: 200px;
-}
-
-/* Additional Styling for Logo, Icons, and Images */
-#Logo-link {
-    padding-top: 5px;
-}
-
-.icon {
-    padding-top: 10px;
-}
-
+/* Image styling with hover effect */
 .card-img {
-    border: 10px solid #000000;
+    border: 10px solid #d9c2a3;
+    transition: transform 0.5s, opacity 0.5s; /* Added opacity transition */
+    box-shadow: 5px 5px 10px #6f7364;
 }
-main section img {
-    box-sizing: border-box;
-    margin-top: 50px;
+
+.card-img:hover {
+    opacity: 0.6; /* Reduced opacity on hover */
+    transform: scale(1.1); /* Enlarges image on hover */
 }
+
+/* Add box shadow to mountains and msg sections */
+.msg {
+    background-color: #6f7364;
+    padding: 35px;
+    grid-column: 6/10;
+    grid-row: 6/7;
+    box-shadow: 5px 5px 10px #6f7364; /* Added box shadow */
+}
+
+.mountains {
+    width: 100%;
+    grid-column: 2/7;
+    grid-row: 5/8;
+    box-shadow: 5px 5px 10px #6f7364; /* Added box shadow */
+}
+
+/* Footer flexbox setup */
+footer {
+    background-color: #333; /* Updated color as per your instructions */
+    padding: 25px 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 200px; /* Adjusted margin-top as per your instructions */
+}
+
+
+/* Media query for responsive design */
+@media screen and (max-width: 900px) {
+    #hero, .home-grid {
+        display: block;
+        height: auto;
+    }
+
+    nav, footer {
+        flex-direction: column;
+    }
+
+    nav a {
+        display: block;
+        padding: 15px;
+    }
+
+    #hero {
+        margin-top: 0;
+    }
+
+    #hero-msg {
+        margin-top: 0;
+    }
+
+    #hero-msg h4 {
+        display: none;
+    }
+
+    .home-title {
+        font-size: 25px;
+    }
+
+    .rivers-card, .camping-card, .rapids-card { 
+        margin: 50px auto;
+        width: 60%;
+    }
+
+    #background {
+        display: none;
+    }
+
+    .mountains, .msg {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    footer {
+        margin-top: 25px;
+    }
+}
+
