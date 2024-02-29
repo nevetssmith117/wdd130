@@ -154,31 +154,40 @@
 }
 /* Activity 5 styles */ 
 .content5 {
-  /* This is the parent of the activity 5 boxes. */
-  height: 400px;
+  height: 400px; /* Adjust height as needed */
+  overflow: auto; /* Clearfix to contain floated elements */
 }
+
 .red5 { 
+  float: left; /* Float the box to the left */
   width: 100px; 
   height: 100px; 
   background-color: red; 
+  margin-right: 20px; /* Space between the box and the text */
 } 
+
 .green5 { 
+  float: left; /* Float the box to the left */
   width: 100px; 
   height: 100px; 
   background-color: green; 
-
+  margin-right: 20px; /* Space between the box and the text */
 } 
+
 .yellow5 {
+  float: left; /* Float the box to the left */
   width: 100px; 
   height: 100px; 
   background-color: gold; 
-
+  margin-right: 20px; /* Space between the box and the text */
 } 
+
 .blue5 {
   width: 100px; 
   height: 100px; 
   background-color: blue; 
-} 
+  /* Do not float the blue box if you want the text to wrap around the first three */
+}
 /* Activity 6 styles */ 
 .content6 {
   /* This is the parent of the activity 6 boxes. */
