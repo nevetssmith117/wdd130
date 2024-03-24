@@ -6,12 +6,21 @@ ul {
 .nav-container {
     display: flex; /* Enables Flexbox layout */
     align-items: center; /* Vertically centers the items in the container */
-    background-color: #333; /* Background color */
+    background-color: #5bc0eb; /* Background color */
 }
 nav {
     display: flex; /* Changes the nav to use Flexbox */
     margin-left: 20px; /* Adds some space between the logo and the nav items */
 }
+
+body {
+    font-family: 'Helvetica', sans-serif; /* Sets the default font for the website */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'IM Fell French Canon SC', serif; /* Specific font for headings */
+}
+
 
 nav a {
     display: block; /* Keeps block display */
@@ -23,7 +32,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #ddd; /* Light grey background on hover */
+    background-color: #FFA5A5; /* Light grey background on hover */
     color: black; /* Change text color on hover */
     border-radius: 100px;
 }
@@ -51,7 +60,7 @@ nav a.active {
 }
 
 footer {
-    background-color: #333; /* Background color of the footer */
+    background-color: #5bc0eb; /* Background color of the footer */
     overflow: hidden; /* Clears floats */
 }
 
