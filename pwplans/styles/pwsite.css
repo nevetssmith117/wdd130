@@ -95,8 +95,17 @@ footer a {
     grid-row: 1;
     border-radius: 100px;
 }
+figure {
+    width: 100%; /* Ensure figure elements take up full column width */
+    margin: 0; /* Remove default margins from figure */
+    display: flex; /* Optional: Use flex to control image and caption alignment */
+    flex-direction: column; /* Stack image and caption vertically */
+    align-items: center; /* Center-align the items if using flex */
+}
+
 figcaption {
     font-size: 35px;
     text-align: center;
+    margin-top: 10px; /* Adjust spacing between image and caption as needed */
 }
 
