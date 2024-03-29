@@ -152,4 +152,9 @@ figcaption {
     transition: margin-left .5s;
     padding: 20px;
   }
-  
+  .logo-sidebar img {
+    width: 80%; /* Adjust based on your preference */
+    max-width: 180px; /* Adjust to fit the sidebar's width */
+    margin: 10px auto; /* Centers the logo in the sidebar */
+    display: block; /* Ensures the logo is block-level for correct margin handling */
+  }
