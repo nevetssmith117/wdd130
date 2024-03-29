@@ -9,19 +9,26 @@
     </head>
 <body>
 
-<header>
-    <div class="nav-container">
-        <a id="Logo-pws" href="index.html">
-            <img class="logo" src="images/apexlogo.webp" alt="apex logo">
-        </a>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="floor-plans.html">Floor Plan & Features</a>
-            <a href="amenities.html">Amenities & Community</a>
-        </nav>
-    </div>
-</header>
-
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="floor-plans.html">Floor Plan & Features</a>
+        <a href="amenities.html">Amenities & Community</a>
+      </div>
+      
+      <!-- Open sidebar button -->
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Open</span>
+      <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft= "0";
+        }
+        </script>
 <main>
     <h1 class="home-title">Apex Living Spaces</h1>
     <h2 class="subtitle">Welcome to "Apex Living Spaces," where luxury meets convenience in the heart of the city. Our community offers a range of floor plans designed to suit your lifestyle, complemented by top-tier amenities that redefine apartment living. Explore what makes "Apex Living Spaces" not just a place to live, but a place to thrive. At "Apex Living Spaces," we've thought of everything to ensure that your home is not just a place to live, but a place to thrive. Our attentive on-site management and maintenance teams are dedicated to providing an unparalleled living experience, one that is as seamless as it is luxurious. Whether you're drawn to the dynamic city life or the comfort of a high-end residence, "Apex Living Spaces" offers the perfect backdrop to craft your ideal lifestyle. Our apartments are designed with the modern urbanite in mind, featuring open-concept layouts, floor-to-ceiling windows that invite natural light, and private balconies that offer breathtaking city views. Kitchens are equipped with sleek, energy-efficient appliances, custom cabinetry, and quartz countertops, while spa-inspired bathrooms boast rain showerheads and deep soaking tubs.</h2>
