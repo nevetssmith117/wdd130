@@ -8,19 +8,31 @@
 </head>
 <body>
 
-<header>
-    
-    <div class="nav-container">
-        <a id="Logo-pws" href="index.html">
-            <img class="logo" src="images/apexlogo.webp" alt="apex logo">
-        </a>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="floor-plans.html">Floor Plan & Features</a>
-            <a href="amenities.html">Amenities & Community</a>
-        </nav>
-    </div>
-</header>
+ <!-- Sidebar navigation -->
+ <div id="mySidenav" class="sidenav">
+    <a href="index.html" class="logo-sidebar">
+      <img src="images/apexlogo.webp" alt="Apex Living Spaces Logo" style="width: 100%; max-width: 200px; margin: 0 auto; display: block;">
+    </a>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="floor-plans.html">Floor Plan & Features</a>
+    <a href="amenities.html">Amenities & Community</a>
+  </div>
+  
+      
+      <!-- Open sidebar button -->
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Open</span>
+      <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft= "0";
+        }
+        </script>
 
 <main>
     <h1 class="home-title">Floor Plans & Features</h1>
